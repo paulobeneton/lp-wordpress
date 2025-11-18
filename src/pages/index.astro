@@ -1,0 +1,95 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { ShieldCheck, Zap, Bug, CloudOff, CheckCircle, Mail } from 'lucide-astro';
+
+// Configuração de Cores simulada via classes do Tailwind
+const colors = {
+  blue: "bg-[#0073AA]",
+  dark: "bg-[#23282D]", 
+  orange: "bg-[#D54E21]"
+};
+---
+
+<Layout title="Remoção de Vírus WordPress - Especialista">
+  
+  <section class="relative bg-[#0073AA] text-white py-20 px-6 overflow-hidden">
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">
+        Seu WordPress Invadido? <br/> Limpamos em até 24h.
+      </h1>
+      <p class="text-lg md:text-2xl mb-10 opacity-90 max-w-2xl mx-auto">
+        Não perca clientes nem posicionamento no Google. Recuperamos a segurança do seu site agora mesmo.
+      </p>
+      <a href="#contato" class="bg-[#D54E21] hover:bg-orange-700 text-white font-bold py-4 px-10 rounded-full text-lg transition transform hover:scale-105 shadow-xl inline-flex items-center gap-2">
+        <ShieldCheck /> QUERO LIMPAR MEU SITE
+      </a>
+    </div>
+  </section>
+
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center text-[#23282D] mb-12">Sinais que seu site está em perigo</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition">
+          <Bug class="w-10 h-10 text-[#D54E21] mb-4" />
+          <h3 class="text-xl font-bold mb-2">Site Lento ou Travando</h3>
+          <p class="text-gray-600">Vírus consomem recursos do servidor, deixando tudo lento.</p>
+        </div>
+        <div class="p-6 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition">
+          <CloudOff class="w-10 h-10 text-[#D54E21] mb-4" />
+          <h3 class="text-xl font-bold mb-2">Redirecionamentos</h3>
+          <p class="text-gray-600">Seus clientes clicam e vão para sites de spam ou jogos.</p>
+        </div>
+        <div class="p-6 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition">
+          <Zap class="w-10 h-10 text-[#D54E21] mb-4" />
+          <h3 class="text-xl font-bold mb-2">Aviso Vermelho do Google</h3>
+          <p class="text-gray-600">Navegadores bloqueando o acesso ao seu site.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-6 bg-gray-100">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-center text-[#23282D] mb-10">O que nós fazemos por você</h2>
+      <div class="space-y-4">
+        <div class="flex items-center gap-4 bg-white p-4 rounded-lg shadow-sm">
+          <CheckCircle class="text-green-500 w-6 h-6 flex-shrink-0" />
+          <span class="text-lg">Escaneamento completo de arquivos e banco de dados.</span>
+        </div>
+        <div class="flex items-center gap-4 bg-white p-4 rounded-lg shadow-sm">
+          <CheckCircle class="text-green-500 w-6 h-6 flex-shrink-0" />
+          <span class="text-lg">Remoção de backdoors (portas dos hackers).</span>
+        </div>
+        <div class="flex items-center gap-4 bg-white p-4 rounded-lg shadow-sm">
+          <CheckCircle class="text-green-500 w-6 h-6 flex-shrink-0" />
+          <span class="text-lg">Atualização segura de plugins e temas.</span>
+        </div>
+        <div class="flex items-center gap-4 bg-white p-4 rounded-lg shadow-sm">
+          <CheckCircle class="text-green-500 w-6 h-6 flex-shrink-0" />
+          <span class="text-lg">Instalação de Firewall e proteção contra novos ataques.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="py-20 px-6 bg-[#23282D] text-white text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-4xl font-bold mb-6">Não espere o pior acontecer</h2>
+      <p class="text-xl mb-8 opacity-80">Entre em contato agora para um orçamento rápido.</p>
+      
+      <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm inline-block w-full max-w-md">
+        <a href="#" class="flex items-center justify-center gap-3 w-full bg-[#25D366] hover:bg-green-600 text-white font-bold py-4 rounded-lg text-lg transition shadow-lg mb-4">
+            Falar no WhatsApp
+        </a>
+        <a href="mailto:contato@seusite.com" class="flex items-center justify-center gap-3 w-full bg-white hover:bg-gray-200 text-[#23282D] font-bold py-4 rounded-lg text-lg transition shadow-lg">
+            <Mail class="w-5 h-5"/> Enviar E-mail
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-8 text-center text-gray-500 text-sm">
+    &copy; {new Date().getFullYear()} Especialistas em WordPress.
+  </footer>
+</Layout>
