@@ -5,6 +5,6 @@ export default defineConfig({
   integrations: [tailwind()],
   server: {
     host: true,
-    port: 3000
+    port: 3010
   }
 });
