@@ -1,0 +1,15 @@
+# Dizemos explicitamente para usar Node.js versão 20
+[phases.setup]
+nixPkgs = ["nodejs_20"]
+
+# Forçamos a instalação das dependências
+[phases.install]
+cmds = ["npm install"]
+
+# Comando de construção
+[phases.build]
+cmds = ["npm run build"]
+
+# Comando para iniciar o servidor (na porta 3000 e liberado para acesso externo)
+[start]
+cmd = "npm run preview -- --host 0.0.0.0 --port 3010"
